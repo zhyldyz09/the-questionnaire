@@ -13,6 +13,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url('image/bg.jpg');
+  background-repeat: no-repeat;
 }
 
 input {
@@ -58,15 +60,15 @@ input:focus {
 }
 
 .send-btn {
-  background: #06B000;
+  background: #f8bc15;
   color: #fff;
   padding: 10px 0;
-  border-color: #068400;
+  border-color: #f6b608;
   cursor: pointer;
 }
 
 .send-btn:hover {
-  background: #08A800;
+  background: #f6b608;
 }
 
 .clear-btn {
@@ -78,7 +80,7 @@ input:focus {
 }
 
 .clear-btn:hover {
-  background: #cd5097;
+  background: #e85fad;
 }
 
 label[for="phone"] {
@@ -89,4 +91,23 @@ label[for="phone"] {
 
 label[for="phone"] i {
   cursor: pointer;
+}
+
+.message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+.hidden {
+  display: none;
 }
