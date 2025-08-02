@@ -12,6 +12,7 @@ form.addEventListener("submit", async (event) => {
   // Предотвращает действие браузера по умолчанию. В данном случае — отправку формы
   // https://learn.javascript.ru/default-browser-action
   event.preventDefault();
+  
   if (!agree.checked) {
     showMessage("Вы должны согласиться с условиями");
     return;
@@ -36,6 +37,7 @@ form.addEventListener("submit", async (event) => {
     const result = await response.json();  
     console.log(result);
     showMessage("Отправка была успешной!")
+    event.target.reset();
    } catch (err) {
     console.log(err);
     showMessage("Ошибка, попробуйте еще раз")
